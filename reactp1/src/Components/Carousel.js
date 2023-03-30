@@ -1,5 +1,7 @@
 import React from 'react'
-
+import img1 from '../Images/it1.jpeg';
+import img2 from '../Images/banner2.jpg';
+import img3 from '../Images/zoo_banner1.JPG';
 export default function carousel() {
   return (
     
@@ -11,13 +13,13 @@ export default function carousel() {
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="..." class="d-block w-100" alt="..."/>
+      <img src={img1} class="d-block w-100" alt="..."/>
     </div>
     <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="..."/>
+      <img src={img2} class="d-block w-100" alt="..."/>
     </div>
     <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="..."/>
+      <img src={img3} class="d-block w-100" alt="..."/>
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
