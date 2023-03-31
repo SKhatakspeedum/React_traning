@@ -5,6 +5,7 @@ import Carousel from './Components/Carousel';
 import Session1 from './Components/Session1';
 import Session2 from './Components/Session2';
 import TestForm from './Components/TestForm';
+import About from './Components/About';
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
     <div className='container my-5'>
    <TestForm className="my-3" heading="Text Box"></TestForm>
    </div>
-   
+   <About></About>
 </>
   );
 }
