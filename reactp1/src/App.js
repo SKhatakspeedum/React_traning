@@ -1,7 +1,7 @@
 
 import './App.css';
 import Navbar from './Components/Navbar';
-import Carousel from './Components/Carousel';
+// import Carousel from './Components/Carousel';
 import Session1 from './Components/Session1';
 import Session2 from './Components/Session2';
 import TestForm from './Components/TestForm';
@@ -12,8 +12,8 @@ function App() {
     <>
    <Navbar></Navbar>
    <Session1 name="First"></Session1>
-   <Carousel></Carousel>
-   <Session1 className="text-center" name="Second"></Session1>
+   {/* <Carousel></Carousel> */}
+   {/* <Session1 name="Second"></Session1> */}
    <div className='container my-4 d-flex justify-content-around' >
    <Session2 num="5156" heading="props1 heading"></Session2> 
    <Session2 num="5896" heading="props2 heading"></Session2>
