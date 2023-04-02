@@ -1,31 +1,31 @@
 import React,{useState} from "react";
-import About_subcom from "./About_subcom.jsx";
+// import About_subcom from "./About_subcom.jsx";
 
 export default function About(props) {
 
-    // const [mystyle,setmystyle]=useState({
-    //     color:'black',
-    //      backgroundColor:'white'
-    // })    
+    const [mystyle,setmystyle]=useState({
+        color:'black',
+         backgroundColor:'white'
+    })    
 
-    // const [btntext, setBtnText]=useState("Enable Dark Mode")
+    const [btntext, setBtnText]=useState("Enable Dark Mode")
      
-    // const toggleStyle=()=>{
-    //     if(mystyle.color==='white'){
-    //         setmystyle({
-    //             color:'black',
-    //             backgroundColor:'white'
-    //         })
-    //         setBtnText("Enable Dark Mode")
-    //     }
-    //     else{
-    //         setmystyle({
-    //             color:'white',
-    //             backgroundColor:'black'
-    //         })
-    //         setBtnText("Enable Light Mode")
-    //     }
-    // }
+    const toggleStyle=()=>{
+        if(mystyle.color==='white'){
+            setmystyle({
+                color:'black',
+                backgroundColor:'white'
+            })
+            setBtnText("Enable Dark Mode")
+        }
+        else{
+            setmystyle({
+                color:'white',
+                backgroundColor:'black'
+            })
+            setBtnText("Enable Light Mode")
+        }
+    }
     
   return (
     <div className='container' style={mystyle}>
@@ -33,7 +33,7 @@ export default function About(props) {
       <div className="accordion" id="accordionExample" >
 
 
-      <About_subcom  season="Spring" define="Spring......." ></About_subcom>
+      {/* <About_subcom  season="Spring" define="Spring......." ></About_subcom> */}
 
         {/* <div className="card">
           <div className="card-header" id="headingOne" style={mystyle}>
