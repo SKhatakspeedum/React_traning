@@ -4,9 +4,9 @@ import Logo from "./navbar_subcom/Logo.jsx";
 import Form from "./navbar_subcom/Form.jsx";
 
 
-export default function Navbar() {
+export default function Navbar(props) {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light">
+    <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}>
       <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
         <Logo brand="MyNature"></Logo>  
           <ul className="navbar-nav mr-auto mt-2 mt-lg-0">

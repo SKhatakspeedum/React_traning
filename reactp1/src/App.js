@@ -8,6 +8,14 @@ import About from "./Components/About";
 import { useState } from "react";
 
 function App() {
+    const [mode,setMode]=useState('dark');
+
+
+
+
+
+
+
   const [items, setItems] = useState([
     {
       heading: "Spring",
@@ -29,26 +37,22 @@ function App() {
 
   return (
     <>
-      <Navbar></Navbar>
+      <Navbar  mode={mode}  ></Navbar>
       <Session1
         align="text-center my-4"
         name="Nature"
         para="Nature is not a place to visit, it is home."
       ></Session1>
+        {/* <Carousel></Carousel> */}
       <div className="container my-3 d-flex justify-content-around">
         {items.map((i, idx) => (
           <Session2 heading={i.heading} img="" para={i.para}></Session2>
-        ))}
-        {/* <Carousel></Carousel> */}
-        {/*    
-   <Session2 heading="" img="" para=""></Session2>
-   <Session2 heading="" img="" para=""></Session2>
-   <Session2 heading="" img="" para=""></Session2> */}
+        ))}  
       </div>
       <div className="container my-5">
         <TestForm className="my-3" heading="Text Box"></TestForm>
       </div>
-      <About about="About Season"></About>
+      <About about="ModeChanger"></About>
       {/* <About season="Summer" define=""></About> */}
     </>
   );
