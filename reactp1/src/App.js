@@ -8,13 +8,20 @@ import About from "./Components/About";
 import { useState } from "react";
 
 function App() {
-    const [mode,setMode]=useState('dark');
+    const [mode,setMode]=useState('light');
 
 
-
-
-
-
+   const toggleMode=()=>{
+      if(mode==='light'){
+        setMode('dark');
+        document.body.style.backgroundColor="gray";
+      }
+      else{
+        setMode('light');
+        document.body.style.backgroundColor="white";
+      }
+      
+    }
 
   const [items, setItems] = useState([
     {
@@ -37,7 +44,7 @@ function App() {
 
   return (
     <>
-      <Navbar  mode={mode}  ></Navbar>
+      <Navbar  mode={mode} toggleMode={toggleMode} ></Navbar>
       <Session1
         align="text-center my-4"
         name="Nature"
@@ -50,7 +57,7 @@ function App() {
         ))}  
       </div>
       <div className="container my-5">
-        <TestForm className="my-3" heading="Text Box"></TestForm>
+        <TestForm className="my-3" heading="Text Box" mode={mode}></TestForm>
       </div>
       <About about="ModeChanger"></About>
       {/* <About season="Summer" define=""></About> */}
