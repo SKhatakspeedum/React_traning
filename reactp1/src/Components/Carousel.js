@@ -1,5 +1,6 @@
 import React from "react";
-// learn image folder 
+// learn image folder \\
+import car1 from './'
 
 
 export default function carousel(props) {

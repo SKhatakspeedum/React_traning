@@ -1,31 +1,14 @@
 import React,{useState} from "react";
 // import About_subcom from "./About_subcom.jsx";
-
+import { toggleStyle } from "../utils/modeChanger";
 export default function About(props) {
 
-    const [mystyle,setmystyle]=useState({
-        color:'black',
-         backgroundColor:'white'
-    })    
+  const [btntext, setBtnText]=useState("Enable Dark Mode")
+  const [mystyle,setmystyle]=useState({
+    color:'black',
+     backgroundColor:'white'
+})    
 
-    const [btntext, setBtnText]=useState("Enable Dark Mode")
-     
-    const toggleStyle=()=>{
-        if(mystyle.color==='white'){
-            setmystyle({
-                color:'black',
-                backgroundColor:'white'
-            })
-            setBtnText("Enable Dark Mode")
-        }
-        else{
-            setmystyle({
-                color:'white',
-                backgroundColor:'black'
-            })
-            setBtnText("Enable Light Mode")
-        }
-    }
     
   return (
     <div className='container' style={mystyle}>
@@ -118,7 +101,9 @@ export default function About(props) {
 
       </div>
      <div className="container my-3">
-      <button type="button" onClick={toggleStyle} className="btn btn-primary">{btntext}</button>
+      <button type="button" onClick={() =>{
+        toggleStyle(mystyle,setmystyle,setBtnText)
+      }} className="btn btn-primary">{btntext}</button>
      </div>
     </div>
   );
