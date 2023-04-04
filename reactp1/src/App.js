@@ -7,6 +7,7 @@ import TestForm from "./Components/TestForm";
 import About from "./Components/About";
 import { useState } from "react";
 import Alert from "./Components/Alert";
+import NextPage from "./Components/NextPage";
 
 function App() {
   const [mode, setMode] = useState("light");
@@ -60,6 +61,7 @@ function App() {
       </div>
       <About about="ModeChanger"></About>
       {/* <About season="Summer" define=""></About> */}
+      <NextPage/>
     </>
   );
 }
