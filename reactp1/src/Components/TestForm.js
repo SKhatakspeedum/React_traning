@@ -24,7 +24,6 @@ export default function TestForm(props) {
       <h2>{props.heading}</h2>
       {/* <textarea className="form-control" value={text} onChange={handleOnChange} style={{backgroundColor:props.mode==="dark"?"#454040":"white",color:props.mode==="dark"?"white":"black" }} rows="5"></textarea> */}
       <textarea className="form-control" value={text} onChange={handleOnChange} style={{backgroundColor:props.mode==="dark"?"#454040":"white",color:"black"}} rows="5"></textarea>
-
       <button className="btn btn-primary mt-3" onClick={handleUpClick} >Convert to Uppercase</button>
       <button className="btn btn-primary mx-3 mt-3" onClick={handleLowClick}>Convert to Lowercase</button>
     </div>

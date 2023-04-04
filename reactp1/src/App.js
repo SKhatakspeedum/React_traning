@@ -6,22 +6,20 @@ import Session2 from "./Components/Session2";
 import TestForm from "./Components/TestForm";
 import About from "./Components/About";
 import { useState } from "react";
+import Alert from "./Components/Alert";
 
 function App() {
-    const [mode,setMode]=useState('light');
+  const [mode, setMode] = useState("light");
 
-
-   const toggleMode=()=>{
-      if(mode==='light'){
-        setMode('dark');
-        document.body.style.backgroundColor="gray";
-      }
-      else{
-        setMode('light');
-        document.body.style.backgroundColor="white";
-      }
-      
+  const toggleMode = () => {
+    if (mode === "light") {
+      setMode("dark");
+      document.body.style.backgroundColor = "gray";
+    } else {
+      setMode("light");
+      document.body.style.backgroundColor = "white";
     }
+  };
 
   const [items, setItems] = useState([
     {
@@ -44,17 +42,18 @@ function App() {
 
   return (
     <>
-      <Navbar  mode={mode} toggleMode={toggleMode} ></Navbar>
+      <Navbar mode={mode} toggleMode={toggleMode}></Navbar>
+      <Alert alert="Please! Login first."></Alert>
       <Session1
         align="text-center my-4"
         name="Nature"
         para="Nature is not a place to visit, it is home."
       ></Session1>
-        {/* <Carousel></Carousel> */}
+      {/* <Carousel></Carousel> */}
       <div className="container my-3 d-flex justify-content-around">
         {items.map((i, idx) => (
           <Session2 heading={i.heading} img="" para={i.para}></Session2>
-        ))}  
+        ))}
       </div>
       <div className="container my-5">
         <TestForm className="my-3" heading="Text Box" mode={mode}></TestForm>
