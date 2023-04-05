@@ -4,9 +4,11 @@ import Navbar from "./Components/Navbar";
 import Session1 from "./Components/Session1";
 import Session2 from "./Components/Session2";
 import TestForm from "./Components/TestForm";
-import About from "./Components/About";
+import AboutUs from "./Components/AboutUs";
 import { useState } from "react";
 import Alert from "./Components/Alert";
+import About from "./Components/About";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   const [mode, setMode] = useState("light");
@@ -42,7 +44,15 @@ function App() {
 
   return (
     <>
+    
+      <BrowserRouter>            
       <Navbar mode={mode} toggleMode={toggleMode}></Navbar>
+
+        <Routes>
+          <Route path="/AboutUs"element={<AboutUs/>}>
+          </Route>
+        </Routes>
+      </BrowserRouter>
       <Alert alert="Please! Login first."></Alert>
       <Session1
         align="text-center my-4"
