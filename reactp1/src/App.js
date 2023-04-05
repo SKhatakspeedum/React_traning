@@ -9,7 +9,7 @@ import { useState } from "react";
 import Alert from "./Components/Alert";
 import About from "./Components/About";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
+import NextPage from "./Components/NewPage";
 function App() {
   const [mode, setMode] = useState("light");
 
@@ -44,10 +44,9 @@ function App() {
 
   return (
     <>
-    
+      
       <BrowserRouter>            
       <Navbar mode={mode} toggleMode={toggleMode}></Navbar>
-
         <Routes>
           <Route path="/AboutUs"element={<AboutUs/>}>
           </Route>
@@ -70,6 +69,7 @@ function App() {
       </div>
       <About about="ModeChanger"></About>
       {/* <About season="Summer" define=""></About> */}
+      <NextPage/>
     </>
   );
 }
