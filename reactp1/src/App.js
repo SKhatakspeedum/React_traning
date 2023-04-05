@@ -10,6 +10,7 @@ import Alert from "./Components/Alert";
 import About from "./Components/About";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NextPage from "./Components/NewPage";
+import Session3 from "./Components/Session3.jsx";
 function App() {
   const [mode, setMode] = useState("light");
 
@@ -70,6 +71,7 @@ function App() {
       <About about="ModeChanger"></About>
       {/* <About season="Summer" define=""></About> */}
       <NextPage/>
+      <Session3></Session3>
     </>
   );
 }

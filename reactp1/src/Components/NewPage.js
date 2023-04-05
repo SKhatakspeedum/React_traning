@@ -9,6 +9,10 @@ export default function NextPage() {
   },[num]);
 
   return (
+
+    <>
+ 
+
     <div className="container text-center my-3">
       <button
         onClick={() => {
@@ -25,11 +29,7 @@ export default function NextPage() {
       >
         Click2 me {nums}
       </button>
-
-
-        
-
-
     </div>
+    </>
   );
 }
