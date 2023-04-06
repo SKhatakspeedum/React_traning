@@ -1,0 +1,9 @@
+.uncontrolledcss {
+  width: 50%;
+  margin: auto;
+  border: 2px solid #292eee !important;
+}
+
+.uncontrolledcss label {
+  font-size: larger;
+}

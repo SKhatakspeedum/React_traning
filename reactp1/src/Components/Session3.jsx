@@ -39,42 +39,40 @@
 //   );
 // }
 
-
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from "react";
 // import Loading from './github/loading';
-import Session3_loading from './Session3_loading';
+import Session3_loading from "./Session3_loading";
 // import GithubUsers from "./github/githubUsers";
-import Session3_user from './Session3_user';
+import Session3_user from "./Session3_user";
 
 const UseEffectAPI = () => {
+  const [users, setUsers] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-    const [users, setUsers] = useState([]);
-    const [loading, setLoading] = useState(true);
-
-    const getUsers = async () => {
-        try {
-            const response = await fetch('https://api.github.com/users');
-             setLoading(false);
-            setUsers(await response.json());
-        } catch (error) {
-            setLoading(false);
-            console.log("my error is "+ error);
-        }
+  const getUsers = async () => {
+    try {
+      const response = await fetch("https://api.github.com/users");
+      setLoading(false);
+      setUsers(await response.json());
+    } catch (error) {
+      setLoading(false);
+      console.log("my error is " + error);
     }
+  };
 
-    useEffect(() => {
-        getUsers();
-    }, []);
+  useEffect(() => {
+    getUsers();
+  }, []);
 
-    if (loading) {
-        return <Session3_loading />
-    }
+  if (loading) {
+    return <Session3_loading />;
+  }
 
-    return (
-        <>
-            <Session3_user users={users}/>
-        </>
-    )
-}
+  return (
+    <>
+      <Session3_user users={users} />
+    </>
+  );
+};
 
-export default UseEffectAPI
+export default UseEffectAPI;

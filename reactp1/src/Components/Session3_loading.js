@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
 const Session3_loading = () => {
-    return (
-        <div className="loadingDiv">
-            <h1>Loading...</h1>
-        </div>
-    )
-}
+  return (
+    <div className="loadingDiv">
+      <h1>Loading...</h1>
+    </div>
+  );
+};
 
-export default Session3_loading
+export default Session3_loading;

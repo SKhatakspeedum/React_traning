@@ -11,6 +11,8 @@ import About from "./Components/About";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NextPage from "./Components/NewPage";
 import Session3 from "./Components/Session3.jsx";
+import Uncontrolled from "./Components/Uncontrolled";
+
 function App() {
   const [mode, setMode] = useState("light");
 
@@ -45,12 +47,10 @@ function App() {
 
   return (
     <>
-      
-      <BrowserRouter>            
-      <Navbar mode={mode} toggleMode={toggleMode}></Navbar>
+      <BrowserRouter>
+        <Navbar mode={mode} toggleMode={toggleMode}></Navbar>
         <Routes>
-          <Route path="/AboutUs"element={<AboutUs/>}>
-          </Route>
+          <Route path="/AboutUs" element={<AboutUs />}></Route>
         </Routes>
       </BrowserRouter>
       <Alert alert="Please! Login first."></Alert>
@@ -70,8 +70,9 @@ function App() {
       </div>
       <About about="ModeChanger"></About>
       {/* <About season="Summer" define=""></About> */}
-      <NextPage/>
+      <NextPage />
       <Session3></Session3>
+      <Uncontrolled />
     </>
   );
 }
