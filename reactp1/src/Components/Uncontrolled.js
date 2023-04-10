@@ -29,16 +29,7 @@ const Uncontrolled = () => {
           <button className="mt-3 mb-3 bg-primary">Submit</button>
         </form>
         <p>
-          {" "}
-          {show ? (
-            <strong>
-              {" "}
-              {`🎊🎈Congratulations 😍 🎊${LuckyName.current.value}!🎈🎊`}
-            </strong>
-          ) : (
-            " "
-          )}
-        </p>
+          {show ? (<strong>{`🎊🎈Congratulations 😍 🎊${LuckyName.current.value}!🎈🎊`}</strong>) : (" ")} </p>
       </div>
 
       <hr></hr>
